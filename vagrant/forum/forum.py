@@ -46,7 +46,6 @@ POST = '''\
 ## Request handler for main page
 def View(env, resp):
     '''View is the 'main page' of the forum.
-
     It displays the submission form and the previously posted messages.
     '''
     # get posts from database
@@ -104,4 +103,3 @@ def Dispatcher(env, resp):
 httpd = make_server('', 8000, Dispatcher)
 print "Serving HTTP on port 8000..."
 httpd.serve_forever()
-
